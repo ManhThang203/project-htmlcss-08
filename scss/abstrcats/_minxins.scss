@@ -1,0 +1,22 @@
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+@mixin breakpoint($key) {
+    // su dung ham map-get
+    // than so thu nhat $grid-breakpoints kieu map  
+    // $key de lay ra gia tri
+    $breapoints: map-get($grid-breakpoints, $key);
+    @if($breapoints) {
+        @media (max-width:($breapoints - 0.02)) {
+            //  @content == width ben @include abstrcats.breakpoint
+            @content;
+        }
+    }@else{
+        // ${$key} noi suy
+        @error "The value #{$key} is not in breakpoints list"
+    }
+}
