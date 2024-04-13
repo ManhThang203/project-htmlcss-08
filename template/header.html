@@ -1,35 +1,62 @@
 <div class="container">
     <div class="top-bar">
-       <!-- More -->
-       <div class="icon top-bar__more">
-        <img src="./assets/icons/more.svg" alt="More" class="top-bar__more-icon">
-       </div>
+        <!-- More -->
+        <div class="icon top-bar__more">
+            <img src="./assets/icons/more.svg" alt="More" class="top-bar__more-icon">
+        </div>
         <!-- Logo -->
         <a href="./" class="logo">
             <img src="./assets/icons/logo.svg" alt="Logo" class="logo__img">
             <h1 class="logo__title">grocerymart</h1>
         </a>
-    
+
         <!-- Navbar -->
         <nav class="navbar">
-            <ul class="navbar__list">
-                <li>
+            <ul class="navbar__list js-dropdown-list">
+                <li class="navbar__item">    
                     <a href="#!" class="navbar__link">
                         Departments
                         <img src="./assets/icons/arrow-down.svg" alt="Arrow-down" class="icon navbar__arrow">
                     </a>
+                    <!-- Dropdown (Menu đổ xuống) -->
+                    <div class="dropdown">
+                        <!--  chua nội dung -->
+                        <div class="dropdown__inner">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor non officia
+                            distinctio aspernatur eum quo, recusandae molestias nemo, explicabo, ducimus voluptas quis
+                            sapiente quaerat fuga similique at consectetur soluta.
+                        </div>
+                    </div>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Grocery
                         <img src="./assets/icons/arrow-down.svg" alt="Arrow-down" class="icon navbar__arrow">
                     </a>
+                     <!-- Dropdown (Menu đổ xuống) -->
+                     <div class="dropdown">
+                        <!--  chua nội dung -->
+                        <div class="dropdown__inner">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor non officia
+                            distinctio aspernatur eum quo, recusandae molestias nemo, explicabo, ducimus voluptas quis
+                            sapiente quaerat fuga similique at consectetur soluta.
+                        </div>
+                    </div>
                 </li>
-                <li>
+                <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Beauty
                         <img src="./assets/icons/arrow-down.svg" alt="Arrow-down" class="icon navbar__arrow">
                     </a>
+                     <!-- Dropdown (Menu đổ xuống) -->
+                     <div class="dropdown">
+                        <!--  chua nội dung -->
+                        <div class="dropdown__inner">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolor non officia
+                            distinctio aspernatur eum quo, recusandae molestias nemo, explicabo, ducimus voluptas quis
+                            sapiente quaerat fuga similique at consectetur soluta.
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -40,7 +67,7 @@
                     <img src="./assets/icons/search.svg" alt="" class=" icon  top-act__img">
                 </button>
             </div>
-    
+
             <div class="top-atc__group">
                 <button class="top-atc__btn">
                     <img src="./assets/icons/heart.svg" alt="" class="icon top-atc__img">

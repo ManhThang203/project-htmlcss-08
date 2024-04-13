@@ -6,4 +6,10 @@ html.dark {
     --top-act-grounp-bg-color:#292E39;
     --top-act-grounp-shadow: rgba(0,0,0,0.2);
     --top-act-grounp-separate:#fff;
+
+    // Dropdown
+    --dropdown-bg-color:#30343d;
+    --dropdown-shadow-color:0px 40px 90px 20px #171C2866;
+    --dropdown-arrow-color:brightness(0) saturate(100%) invert(15%) sepia(5%) saturate(2153%) hue-rotate(184deg) brightness(99%) contrast(85%);
+    ;
 }

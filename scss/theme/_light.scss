@@ -11,4 +11,8 @@ html {
     @include abstrcats.breakpoint(lg){
         --header-bg-color:#fff;
     }
+
+    // Dropdown
+    --dropdown-bg-color:#fff;
+    --dropdown-shadow-color:#C8C8C866;
 }
