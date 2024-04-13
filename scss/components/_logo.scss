@@ -5,6 +5,8 @@
     gap: 14px;
     @include abstrcats.breakpoint(lg){
       gap: 10px;
+      margin-left: 39px;
+      margin-right: 39px;
     }
     &__title{
          //styleName: Bold 22;
@@ -20,7 +22,6 @@
       @include abstrcats.breakpoint(lg){
           width: 24px;
           height: 24px;
-          margin-left: 39px;
        }
     }
 }
