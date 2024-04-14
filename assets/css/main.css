@@ -1131,6 +1131,10 @@ html.dark {
   --dropdown-bg-color:#30343d;
   --dropdown-shadow-color:0px 40px 90px 20px #171C2866;
   --dropdown-arrow-color:brightness(0) saturate(100%) invert(15%) sepia(5%) saturate(2153%) hue-rotate(184deg) brightness(99%) contrast(85%);
+  --top-menu-border-color:#171C28;
+  --menu-column-icon-2-color:brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(791%) hue-rotate(72deg) brightness(108%) contrast(94%);
+  --menu-column__heading-color:#B9BABE;
+  --menu-column--list--link-color:#B9BABE;
 }
 
 html {
@@ -1143,6 +1147,10 @@ html {
   --top-act-grounp-separate:#ededf6;
   --dropdown-bg-color:#fff;
   --dropdown-shadow-color:#C8C8C866;
+  --top-menu-border-color:#D2D1D6;
+  --menu-column-icon-2-color: brightness(0) saturate(100%) invert(8%) sepia(20%) saturate(1820%) hue-rotate(210deg) brightness(99%) contrast(96%);
+  --menu-column__heading-color:#1A162E;
+  --menu-column--list--link-color:#1A162E;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1313,6 +1321,7 @@ html {
 }
 
 .dropdown {
+  width: min(1240px, 100%);
   display: none;
   position: absolute;
   left: 0;
@@ -1321,6 +1330,7 @@ html {
 .dropdown__inner {
   position: relative;
   border-radius: 20px;
+  max-height: min(582px, 100vh - 158px);
   padding: 30px;
   background: var(--dropdown-bg-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
@@ -1332,6 +1342,65 @@ html {
   filter: var(--dropdown-arrow-color);
   left: var(--arrow-left-pos);
   translate: -50%;
+}
+
+.top-menu {
+  height: 100%;
+}
+.top-menu__main {
+  height: 100%;
+  width: 292px;
+  border-right: 1px solid var(--top-menu-border-color);
+}
+
+.menu-column {
+  display: flex;
+  gap: 14px;
+}
+.menu-column__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+}
+.menu-column__content {
+  flex: 1;
+}
+.menu-column__icon-1 {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.menu-column__icon-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  filter: var(--menu-column-icon-2-color);
+}
+.menu-column__heading {
+  margin-top: 6px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--menu-column__heading-color);
+}
+.menu-column__list {
+  margin-top: 13px;
+}
+.menu-column__list--link {
+  display: block;
+  padding: 7px 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 143%;
+  color: var(--menu-column--list--link-color);
+}
+.menu-column__list--link:hover {
+  font-weight: 500;
+  color: #0071DC;
 }
 
 /*# sourceMappingURL=main.css.map */
