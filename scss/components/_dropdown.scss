@@ -7,11 +7,14 @@
     padding-top: 54px;
     
     &__inner{
+        // tao bien 
+        --inner-max-height:min(582px , 100vh - 158px);
+        --inner-padding:30px;
         position: relative;
         border-radius: 20px;
         // chieu cao toi da
-        max-height: min(582px , 100vh - 158px);
-        padding: 30px;
+        max-height:var(--inner-max-height);
+        padding: var(--inner-padding);
         background:var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);    
         &::before{
@@ -27,12 +30,15 @@
 }
 // Top-Menu
 .top-menu{
-    height: 100%;
+    // chu di chieu tren duoi 30px cua inner 
+    max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
 
     &__main{
-        height: 100%;
+        max-height: inherit;
         width: 292px;
         border-right: 1px solid var(--top-menu-border-color);
+        // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
+        overflow-y: auto;
     }
 }
 .menu-column{

@@ -5,11 +5,13 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(6%) sepia(32%) saturate(2861%) hue-rotate(228deg) brightness(92%) contrast(93%);;
     --header-bg-color:#eee;
     --body-bg-color:#f6f6f6;
-    --top-act-grounp-bg-color:#fff;
+    --top-act-grounp-bg-color:#bbb8b81c;
     --top-act-grounp-shadow: rgba(237, 237, 246, 0.2);
-    --top-act-grounp-separate:#ededf6;
+    --top-act-grounp-separate:#383839;
     @include abstrcats.breakpoint(lg){
         --header-bg-color:#fff;
+        --header-shadow-color:0px 20px 60px 10px #EDEDF633;
+
     }
 
     // Dropdown

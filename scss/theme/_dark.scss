@@ -1,3 +1,4 @@
+@use "../abstrcats";
 html.dark {
     --text-color:#fff;
     --icon-color: brightness(0) saturate(100%) invert(98%) sepia(7%) saturate(590%) hue-rotate(194deg) brightness(118%) contrast(100%);
@@ -6,6 +7,13 @@ html.dark {
     --top-act-grounp-bg-color:#292E39;
     --top-act-grounp-shadow: rgba(0,0,0,0.2);
     --top-act-grounp-separate:#fff;
+
+    @include abstrcats.breakpoint(lg){
+        --header-shadow-color: 0px 20px 60px 10px #00000033;
+        ;
+
+    }
+
 
     // Dropdown
     --dropdown-bg-color:#30343d;
