@@ -1,3 +1,4 @@
+@use "../abstrcats";
 .dropdown{
     width: min(1240px, 100%);
     display: none;
@@ -32,10 +33,13 @@
 .top-menu{
     // chu di chieu tren duoi 30px cua inner 
     max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
-
+    // dinh vi cho sub-menu
+    position: relative;
+    // tao bien ke thua
+    --main-column-width: 292px;
     &__main{
         max-height: inherit;
-        width: 292px;
+        width: var(--main-column-width);
         border-right: 1px solid var(--top-menu-border-color);
         // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
         overflow-y: auto;
@@ -44,13 +48,21 @@
 .menu-column{
     display: flex;
     gap: 14px;
+    // muenu-column dang sau lien ke 
+    + .menu-column{
+        margin-top: 22px;
+    }
    &__icon{
     position: relative;
     // su dung flex-shrink de ko lam meo anh 
     flex-shrink: 0;
     width: 36px;
     height: 36px;
+    @include abstrcats.breakpoint(xl){
+        display: none;
+    
    }
+}
    &__content{
     // su dung flex :1 de chiem het do rong con lai
     flex: 1;
@@ -58,7 +70,7 @@
    &__icon-1{
     width: 30px;
     height: 30px;
-    object-fit: cover;
+    object-fit: contain;
 }
 &__icon-2{
     position: absolute;
@@ -66,8 +78,9 @@
     bottom: 0;
     width: 24px;
     height: 24px;
-    object-fit: cover;
+    object-fit: contain;
     filter: var(--menu-column-icon-2-color);
+
    }
    &__heading{
      margin-top: 6px;
@@ -79,6 +92,16 @@
    &__list{
         margin-top: 13px;
    }
+   &__items{
+     &:hover .sub-menu{
+        display: grid;
+     }
+   }
+   // tác động the list--link ở cấp 1 
+   &__items:hover  > &__list--link{
+       font-weight: 500;
+       color: #0071DC;
+}
    &__list--link{
     display: block;
     padding: 7px 0;
@@ -91,4 +114,14 @@
         color: #0071DC;
     }
 }
+}
+.sub-menu{
+    display: none;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: var(--inner-padding);
+    position: absolute;
+    // top 0 bootom o va right 0 su dung gia tri tuyet doi
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
 }
