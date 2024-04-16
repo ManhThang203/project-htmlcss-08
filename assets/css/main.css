@@ -1413,10 +1413,10 @@ html {
 .menu-column__list {
   margin-top: 13px;
 }
-.menu-column__items:hover .sub-menu {
+.menu-column__items--active .sub-menu {
   display: grid;
 }
-.menu-column__items:hover > .menu-column__list--link {
+.menu-column__items--active > .menu-column__list--link, .menu-column__items:hover > .menu-column__list--link {
   font-weight: 500;
   color: #0071DC;
 }

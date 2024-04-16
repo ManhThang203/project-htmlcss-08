@@ -93,10 +93,11 @@
         margin-top: 13px;
    }
    &__items{
-     &:hover .sub-menu{
+     &--active .sub-menu{
         display: grid;
      }
    }
+   &__items--active > &__list--link,
    // tác động the list--link ở cấp 1 
    &__items:hover  > &__list--link{
        font-weight: 500;
