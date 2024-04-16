@@ -1442,5 +1442,13 @@ html {
   padding-left: var(--inner-padding);
   overflow-y: auto;
 }
+.sub-menu--not-main {
+  display: grid;
+  position: initial;
+  inset: initial;
+  grid-template-columns: repeat(4, 1fr);
+  height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+  padding-left: 0;
+}
 
 /*# sourceMappingURL=main.css.map */
