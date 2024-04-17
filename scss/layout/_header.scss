@@ -36,11 +36,61 @@
     @include abstrcats.breakpoint(xl){
         margin-left: 27px;
     }
+    &__close-left{
+        display: none;
+        @include abstrcats.breakpoint(lg){
+            display: block;
+            padding: 10px 40px;
+        }
+    }
    @include abstrcats.breakpoint(lg){
-    display: none;
+    // display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 9;
+    margin-left: 0;
+    background-color: #fff;
+    padding: 20px 0;
+    // translate theo chiều x 
+    translate: -100%;
+    // hiêu ứng xuất hiện chpo translate 0.5s
+    transition:  translate 0.5s;
+    &.show{
+       // translate theo chiều x 
+        translate: 0;
+    }
+    // ~ lấy ra tất cả các thẻ đằng sau cua the navbar(class narbar-show)
+    &.show ~ &__overlay{
+        // translate theo chiều x 
+           visibility: visible;
+           opacity: 1;
+     }
+   }
+   // overlay
+   &__overlay{
+       // dung  visibility: hidden de co the dung đc animation còn  display: none thì ko 
+        visibility: hidden;
+        opacity: 0;
+        @include abstrcats.breakpoint(lg){
+         // giá trị mặc định 
+        //  visibility: visible;
+        //  opacity: 1;
+         position: fixed;
+         inset: 0;
+         z-index: 8;
+         background: rgba($color: #000000, $alpha: 0.4);  
+         transition:   opacity, visibility;
+         // có 2 tham số chuyền vào  transition thì dùng   transition-duration
+         transition-duration: 0.5s;
+        }
    }
    &__list {
     @extend %flexItemsCenter;
+    @include abstrcats.breakpoint(lg){
+        // đổi trục ngang thành dọc
+        flex-direction: column;
+        align-items: flex-start;
+       }
    }
    &__link {
     @extend %flexItemsCenter;
@@ -50,6 +100,13 @@
     line-height: 146.667%;
     height: 50px;
     padding: 0 15px;
+    @include abstrcats.breakpoint(lg){
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        font-size: 1.6rem;
+        line-height: 150%;   
+       }
    }
    &__arrow{
      margin-top: 3px;
@@ -58,6 +115,13 @@
      &:hover .dropdown{
         display: block;
      }
+     @include abstrcats.breakpoint(lg){
+        // tăng width 100% thi the con la the a se an theo va se đặt được  justify-content: space-between
+          width: 100%;
+          &:hover .dropdown{
+            display: none;
+         }
+    }
    }
 }
 .top-atc{
