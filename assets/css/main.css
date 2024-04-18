@@ -1498,7 +1498,7 @@ html {
 }
 @media (max-width: 991.98px) {
   .dropdown__inner {
-    border-radius: none;
+    max-height: none;
     background: transparent;
     box-shadow: none;
     padding: 0 40px;
@@ -1512,6 +1512,11 @@ html {
   max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
   position: relative;
   --main-column-width: 292px;
+}
+@media (max-width: 991.98px) {
+  .top-menu {
+    max-height: none;
+  }
 }
 .top-menu__main {
   width: var(--main-column-width);

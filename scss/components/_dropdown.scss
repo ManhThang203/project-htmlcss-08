@@ -32,7 +32,7 @@
             translate: -50%;
         } 
         @include abstrcats.breakpoint(lg){
-             border-radius: none;
+             max-height: none;
              background:transparent;
              box-shadow: none;
              padding: 0 40px;
@@ -50,6 +50,9 @@
     position: relative;
     // tao bien ke thua
     --main-column-width: 292px;
+    @include abstrcats.breakpoint(lg){
+        max-height: none;
+   } 
     &__main{
         width: var(--main-column-width);
         height: var(--inner-max-height);
