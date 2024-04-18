@@ -1335,7 +1335,7 @@ html {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
-    height: calc(100% - 27px);
+    height: calc(100% - 26px);
     overflow-y: auto;
   }
 }
@@ -1549,7 +1549,7 @@ html {
     display: none;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .menu-column__icon {
     display: block;
   }
@@ -1634,6 +1634,12 @@ html {
   grid-template-columns: repeat(4, 1fr);
   height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
   padding-left: 0;
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

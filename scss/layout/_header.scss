@@ -91,7 +91,7 @@
         flex-direction: column;
         align-items: flex-start;
         // 100% la ăn  theo chiều cao của thẻ cha là navbar
-        height: calc(100% - 27px);
+        height: calc(100% - 26px);
         overflow-y: auto;
        }
    }
@@ -186,5 +186,4 @@
         display: block;
         cursor: pointer;
     }
-
 }

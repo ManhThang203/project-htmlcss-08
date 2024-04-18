@@ -32,13 +32,13 @@
             translate: -50%;
         } 
         @include abstrcats.breakpoint(lg){
-            border-radius: none;
-            background:transparent;
-            box-shadow: none;
-            padding: 0 40px;
-            &::before{
-                content: none;
-            }
+             border-radius: none;
+             background:transparent;
+             box-shadow: none;
+             padding: 0 40px;
+             &::before{
+                 content: none;
+             }
         } 
     }
 }
@@ -57,9 +57,9 @@
         // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
         overflow-y: auto;
         @include abstrcats.breakpoint(lg){
-           width: 100%;
-           height: auto;
-           border-right: none;
+            width: 100%;
+            height: auto;
+            border-right: none;
        }
     }
 }
@@ -81,10 +81,10 @@
     height: 36px;
     @include abstrcats.breakpoint(xl){
         display: none;
-   }
-   @include abstrcats.breakpoint(xl){
+    }
+    @include abstrcats.breakpoint(lg){
     display: block;
-  }
+    }
 }
    &__content{
     // su dung flex :1 de chiem het do rong con lai
@@ -155,7 +155,7 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
     @include abstrcats.breakpoint(lg){
-       position: initial;
+       position:initial;
        grid-template-columns: 1fr;
        padding-left: 0;
     }
@@ -170,5 +170,9 @@
         grid-template-columns: repeat(4,1fr);
         height:  calc(var(--inner-max-height) - var(--inner-padding)*2);
         padding-left: 0;
+        @include abstrcats.breakpoint(lg){
+            grid-template-columns: 1fr;
+            height: auto;
+         }
     }
 }
