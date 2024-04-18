@@ -1,0 +1,33 @@
+// Breakpoints, dimension, container, row, column, v.v
+$breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+    
+);
+// tao 1 bien 
+$display-values:block,flex, grid, none;
+// chuyen tham so $breakpoints
+@mixin make-display($breakpoints:null){
+    // tao 1 bien $infix de kiem tra dieu kien
+    $infix: if($breakpoints, "-#{$breakpoints}", "");
+     // lap qua tung phan tu cua $display-values
+     @each $display in $display-values {
+        //@debug $display ;
+        //@debug ".d#{$infix}-#{$display}";
+        .d#{$infix}-#{$display}{
+           display: $display !important;
+        }
+    }
+}
+// tra ve cac phan tu rong 
+@include make-display();
+// su dung @ each lap qua cac phan tu 
+@each $breakpoints ,$dimenstion in $breakpoints{
+    //@debug $breakpoints;
+    @media (max-width:($dimenstion - 0.02)) {
+       @include make-display($breakpoints);
+    }
+}

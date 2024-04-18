@@ -23,13 +23,13 @@
         justify-content: space-between;
     }
     // An More
-    &__more{
-        display: none;
-        // hien More
-     @include abstrcats.breakpoint(lg){
-            display: block;
-        }
-    }
+    // &__more{
+    //     display: none;
+    //     // hien More
+    //  @include abstrcats.breakpoint(lg){
+    //         display: block;
+    //     }
+    // }
 }
 .navbar{
     margin-left: 129px;
@@ -147,9 +147,9 @@
     }
     &__group:first-child{
         padding: 13px;
-        @include abstrcats.breakpoint(md){
-            display: none;
-          }
+        // @include abstrcats.breakpoint(md){
+        //     display: none;
+        //   }
 
     }
     &__btn{
