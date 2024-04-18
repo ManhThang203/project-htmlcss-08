@@ -1335,6 +1335,8 @@ html {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
+    height: calc(100% - 27px);
+    overflow-y: auto;
   }
 }
 .navbar__link {
@@ -1363,9 +1365,6 @@ html {
 @media (max-width: 991.98px) {
   .navbar__item {
     width: 100%;
-  }
-  .navbar__item:hover .dropdown {
-    display: none;
   }
 }
 
@@ -1471,6 +1470,13 @@ html {
   left: 0;
   padding-top: 54px;
 }
+@media (max-width: 991.98px) {
+  .dropdown {
+    position: initial;
+    display: block;
+    padding-top: 0;
+  }
+}
 .dropdown__inner {
   --inner-max-height:min(582px , 100vh - 158px);
   --inner-padding:30px;
@@ -1489,6 +1495,17 @@ html {
   left: var(--arrow-left-pos);
   translate: -50%;
 }
+@media (max-width: 991.98px) {
+  .dropdown__inner {
+    border-radius: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0 40px;
+  }
+  .dropdown__inner::before {
+    content: none;
+  }
+}
 
 .top-menu {
   max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
@@ -1496,15 +1513,27 @@ html {
   --main-column-width: 292px;
 }
 .top-menu__main {
-  max-height: inherit;
   width: var(--main-column-width);
+  height: var(--inner-max-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .top-menu__main {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
 }
 
 .menu-column {
   display: flex;
   gap: 14px;
+}
+@media (max-width: 991.98px) {
+  .menu-column {
+    margin-top: 10px;
+  }
 }
 .menu-column + .menu-column {
   margin-top: 22px;
@@ -1518,6 +1547,11 @@ html {
 @media (max-width: 1199.98px) {
   .menu-column__icon {
     display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .menu-column__icon {
+    display: block;
   }
 }
 .menu-column__content {
@@ -1544,8 +1578,18 @@ html {
   line-height: 150%;
   color: var(--menu-column__heading-color);
 }
+@media (max-width: 991.98px) {
+  .menu-column__heading {
+    margin-bottom: 26px;
+  }
+}
 .menu-column__list {
   margin-top: 13px;
+}
+@media (max-width: 1199.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__items--active .sub-menu {
   display: grid;
@@ -1575,6 +1619,13 @@ html {
   inset: 0 0 0 var(--main-column-width);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .sub-menu {
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
 }
 .sub-menu--not-main {
   display: grid;

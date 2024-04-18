@@ -6,7 +6,11 @@
     // định vị sát sang bên trái 
     left: 0;    
     padding-top: 54px;
-    
+    @include abstrcats.breakpoint(lg){
+        position: initial;
+        display: block;   
+        padding-top: 0;
+   }
     &__inner{
         // tao bien 
         --inner-max-height:min(582px , 100vh - 158px);
@@ -26,7 +30,16 @@
             // sử dụng biến js để css cho left
             left: var(--arrow-left-pos);
             translate: -50%;
-        }    
+        } 
+        @include abstrcats.breakpoint(lg){
+            border-radius: none;
+            background:transparent;
+            box-shadow: none;
+            padding: 0 40px;
+            &::before{
+                content: none;
+            }
+        } 
     }
 }
 // Top-Menu
@@ -38,16 +51,24 @@
     // tao bien ke thua
     --main-column-width: 292px;
     &__main{
-        max-height: inherit;
         width: var(--main-column-width);
+        height: var(--inner-max-height);
         border-right: 1px solid var(--top-menu-border-color);
         // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
         overflow-y: auto;
+        @include abstrcats.breakpoint(lg){
+           width: 100%;
+           height: auto;
+           border-right: none;
+       }
     }
 }
 .menu-column{
     display: flex;
     gap: 14px;
+    @include abstrcats.breakpoint(lg){
+       margin-top: 10px;
+   }
     // muenu-column dang sau lien ke 
     + .menu-column{
         margin-top: 22px;
@@ -60,8 +81,10 @@
     height: 36px;
     @include abstrcats.breakpoint(xl){
         display: none;
-    
    }
+   @include abstrcats.breakpoint(xl){
+    display: block;
+  }
 }
    &__content{
     // su dung flex :1 de chiem het do rong con lai
@@ -88,9 +111,15 @@
      font-size: 1.6rem;
      line-height: 150%;
      color: var(--menu-column__heading-color);
+     @include abstrcats.breakpoint(lg){
+        margin-bottom: 26px;
+    }
    }
    &__list{
         margin-top: 13px;
+        @include abstrcats.breakpoint(xl){
+            margin-top: 0   ;
+       }
    }
    &__items{
      &--active .sub-menu{
@@ -125,6 +154,11 @@
     inset: 0 0 0 var(--main-column-width);
     padding-left: var(--inner-padding);
     overflow-y: auto;
+    @include abstrcats.breakpoint(lg){
+       position: initial;
+       grid-template-columns: 1fr;
+       padding-left: 0;
+    }
     // Sub-menu--not-main
     &--not-main{
         display: grid;

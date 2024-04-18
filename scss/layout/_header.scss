@@ -90,6 +90,9 @@
         // đổi trục ngang thành dọc
         flex-direction: column;
         align-items: flex-start;
+        // 100% la ăn  theo chiều cao của thẻ cha là navbar
+        height: calc(100% - 27px);
+        overflow-y: auto;
        }
    }
    &__link {
@@ -118,9 +121,9 @@
      @include abstrcats.breakpoint(lg){
         // tăng width 100% thi the con la the a se an theo va se đặt được  justify-content: space-between
           width: 100%;
-          &:hover .dropdown{
-            display: none;
-         }
+        //   &:hover .dropdown{
+        //     display: none;
+        //  }
     }
    }
 }
