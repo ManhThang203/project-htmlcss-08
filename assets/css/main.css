@@ -1353,6 +1353,7 @@ html {
     flex-direction: column;
     align-items: flex-start;
     height: calc(100% - 45px);
+    overscroll-behavior: contain;
     overflow-y: auto;
   }
 }
@@ -1570,6 +1571,11 @@ html {
   }
   .dropdown__inner::before {
     content: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .dropdown__inner {
+    padding-left: 20px;
   }
 }
 

@@ -102,6 +102,8 @@
         align-items: flex-start;
         // 100% la ăn  theo chiều cao của thẻ cha là navbar
         height: calc(100% - 45px);
+        // tao thanh cuon cao su trên mobile
+        overscroll-behavior: contain;
         overflow-y: auto;
        }
        @include abstrcats.breakpoint(md){

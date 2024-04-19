@@ -38,7 +38,10 @@
              &::before{
                  content: none;
              }
-        } 
+        }
+        @include abstrcats.breakpoint(md){
+            padding-left: 20px;
+         }
     }
 }
 // Top-Menu
@@ -122,6 +125,7 @@
         @include abstrcats.breakpoint(xl){
             margin-top: 0   ;
        }
+      
    }
    &__items{
      &--active .sub-menu{
