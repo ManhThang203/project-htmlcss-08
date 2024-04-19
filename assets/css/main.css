@@ -1222,6 +1222,8 @@ html.dark {
   --menu-column-icon-2-color:brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(791%) hue-rotate(72deg) brightness(108%) contrast(94%);
   --menu-column__heading-color:#B9BABE;
   --menu-column--list--link-color:#B9BABE;
+  --sidebar-bg:#292E39;
+  --slidebar-shadow: 0px 40px 90px 20px #171C2866;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1243,6 +1245,8 @@ html {
   --menu-column-icon-2-color: brightness(0) saturate(100%) invert(8%) sepia(20%) saturate(1820%) hue-rotate(210deg) brightness(99%) contrast(96%);
   --menu-column__heading-color:#1A162E;
   --menu-column--list--link-color:#1A162E;
+  --sidebar-bg:#fff;
+  --slidebar-shadow: 0px 40px 90px 20px #C8C8C866;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1299,16 +1303,28 @@ html {
     padding: 10px 40px;
   }
 }
+@media (max-width: 767.98px) {
+  .navbar__close-left {
+    padding: 0 20px 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0 !important;
+  }
+}
 @media (max-width: 991.98px) {
   .navbar {
     position: fixed;
     inset: 0 50% 0 0;
     z-index: 9;
     margin-left: 0;
-    background-color: #fff;
+    background-color: var(--sidebar-bg);
     padding: 20px 0;
     translate: -100%;
     transition: translate 0.5s;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: var(--slidebar-shadow);
   }
   .navbar.show {
     translate: 0;
@@ -1336,8 +1352,13 @@ html {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
-    height: calc(100% - 26px);
+    height: calc(100% - 45px);
     overflow-y: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 123px);
   }
 }
 .navbar__link {
@@ -1355,6 +1376,12 @@ html {
     padding: 0 40px;
     font-size: 1.6rem;
     line-height: 150%;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__link {
+    padding-left: 20px;
+    height: 44px;
   }
 }
 .navbar__arrow {
@@ -1442,6 +1469,30 @@ html {
   object-fit: cover;
   display: block;
   cursor: pointer;
+}
+
+.nav-btn {
+  height: 50px;
+  padding: 0 40px;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .nav-btn {
+    padding-left: 20px;
+    height: 44px;
+  }
+}
+.nav-btn__title, .nav-btn__qnt {
+  margin-left: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.66%;
+}
+.nav-btn__title, .nav-btn__qnt {
+  margin-left: 16px;
+}
+.nav-btn__qnt {
+  margin-left: auto;
 }
 
 .logo {
