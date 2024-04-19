@@ -1,29 +1,3 @@
-// function load(selector, path) {
-//     // lấy kiểm tra xem có cache trong local storage không 
-//     // getItem là lấy dữ liệu từ LOCALSTORAGE
-//     const cached = localStorage.getItem(path);
-//     // Nếu có cache 
-//     if (cached) {
-//         // Hiển thị lên giao diện 
-//         document.querySelector(selector).innerHTML = cached;
-//     }
-
-//     // Fetch dữ liệu mới (Call API)//
-//     // fetch là phuong thức đế GỬI YÊU CẦU　lên server thông qua API 
-//     fetch(path)
-//         // Chuyển sữ liệu sang kiểu text
-//         // phương thức THEN() được thực thi khi có PHANT HỒI từ máy chủ trả về
-//         .then((res) => res.text())
-//         .then((html) => {
-//             if (html !== cached) {
-//                 // So sánh dữ liệu cache vừa lấy ra ở bên trên nếu khác nhau thì mới hiển thị 
-//                 document.querySelector(selector).innerHTML = html;
-//                 // Lưu vào cache
-//                 localStorage.setItem(path, html);
-//             }
-//         });
-// }
-
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -128,7 +102,7 @@ window.addEventListener("template-loaded", handleActiveMenu);
 function handleActiveMenu() {
     const dropdowns = $$(".js-dropdown");
     const menus = $$(".js-menu-list");
-    const activeClass = "menu-column__items--active";
+    const activeClass = "menu-column__item--active";
 
     const removeActive = (menu) => {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
@@ -140,13 +114,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });

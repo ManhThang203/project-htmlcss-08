@@ -45,7 +45,7 @@
 // Top-Menu
 .top-menu{
     // chu di chieu tren duoi 30px cua inner 
-    max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
+    --max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
     // dinh vi cho sub-menu
     position: relative;
     // tao bien ke thua
@@ -55,7 +55,7 @@
    } 
     &__main{
         width: var(--main-column-width);
-        height: var(--inner-max-height);
+        height: var(--max-height);
         border-right: 1px solid var(--top-menu-border-color);
         // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
         overflow-y: auto;

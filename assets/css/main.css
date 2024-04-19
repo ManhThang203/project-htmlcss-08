@@ -1509,7 +1509,7 @@ html {
 }
 
 .top-menu {
-  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+  --max-height: calc(var(--inner-max-height) - var(--inner-padding)*2);
   position: relative;
   --main-column-width: 292px;
 }
@@ -1520,7 +1520,7 @@ html {
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: var(--inner-max-height);
+  height: var(--max-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
