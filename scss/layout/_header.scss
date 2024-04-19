@@ -114,6 +114,14 @@
    }
    &__arrow{
      margin-top: 3px;
+     @include abstrcats.breakpoint(lg){
+        rotate: -90deg;  
+        transition: rotate 0.3s;
+       }
+
+   }
+   &__item--active &__arrow{
+       rotate: 0deg;
    }
    &__item{
      &:hover .dropdown{
@@ -122,9 +130,12 @@
      @include abstrcats.breakpoint(lg){
         // tăng width 100% thi the con la the a se an theo va se đặt được  justify-content: space-between
           width: 100%;
-        //   &:hover .dropdown{
-        //     display: none;
-        //  }
+          &:hover .dropdown{
+            display: none;
+         }
+         &--active:hover .dropdown{
+            display: block !important;
+         }
     }
    }
 }
