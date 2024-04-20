@@ -8,7 +8,7 @@ html.dark {
     --top-act-grounp-shadow: rgba(0,0,0,0.2);
     --top-act-grounp-separate:#fff;
 
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         --header-shadow-color: 0px 20px 60px 10px #00000033;
         ;
 

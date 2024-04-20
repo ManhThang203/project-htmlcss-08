@@ -8,7 +8,7 @@ html {
     --top-act-grounp-bg-color:#bbb8b81c;
     --top-act-grounp-shadow: rgba(237, 237, 246, 0.2);
     --top-act-grounp-separate:#383839;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         --header-bg-color:#fff;
         --header-shadow-color:0px 20px 60px 10px #EDEDF633;
 

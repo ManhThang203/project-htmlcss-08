@@ -5,7 +5,7 @@
 }
 .header{
     background:var(--header-bg-color);
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
        box-shadow: var(--header-shadow-color);
     }
 }
@@ -15,11 +15,11 @@
         z-index: 1;
     padding: 30px 0;
     // Table
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         padding: 20px 0;
     }
     // MObie
-    @include abstrcats.breakpoint(sm){
+    @include abstrcats.screen(sm){
         padding: 16px 0;
         justify-content: space-between;
     }
@@ -27,31 +27,31 @@
     // &__more{
     //     display: none;
     //     // hien More
-    //  @include abstrcats.breakpoint(lg){
+    //  @include abstrcats.screen(lg){
     //         display: block;
     //     }
     // }
 }
 .navbar{
     margin-left: 129px;
-    @include abstrcats.breakpoint(xl){
+    @include abstrcats.screen(xl){
         margin-left: 27px;
     }
     &__close-left{
         display: none;
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
             display: block;
             padding: 10px 40px;
         }
-        @include abstrcats.breakpoint(md){
+        @include abstrcats.screen(md){
             padding: 0 20px 10px;
         }
     }
     // lam reponsive trên mobile
-    @include abstrcats.breakpoint(sm){
+    @include abstrcats.screen(sm){
         inset: 0 20% 0 0 !important;
     }
-   @include abstrcats.breakpoint(lg){
+   @include abstrcats.screen(lg){
     // display: none;
     position: fixed;
     inset: 0 50% 0 0;
@@ -81,7 +81,7 @@
        // dung  visibility: hidden de co the dung đc animation còn  display: none thì ko 
         visibility: hidden;
         opacity: 0;
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
          // giá trị mặc định 
         //  visibility: visible;
         //  opacity: 1;
@@ -96,7 +96,7 @@
    }
    &__list {
     @extend %flexItemsCenter;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         // đổi trục ngang thành dọc
         flex-direction: column;
         align-items: flex-start;
@@ -106,7 +106,7 @@
         overscroll-behavior: contain;
         overflow-y: auto;
        }
-       @include abstrcats.breakpoint(md){
+       @include abstrcats.screen(md){
         
         // 100% la ăn  theo chiều cao của thẻ cha là navbar
         height: calc(100% - 123px);
@@ -121,21 +121,21 @@
     line-height: 146.667%;
     height: 50px;
     padding: 0 15px;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         display: flex;
         justify-content: space-between;
         padding: 0 40px;
         font-size: 1.6rem;
         line-height: 150%;   
        }
-       @include abstrcats.breakpoint(md){
+       @include abstrcats.screen(md){
         padding-left: 20px;
         height: 44px;
       }
    }
    &__arrow{
      margin-top: 3px;
-     @include abstrcats.breakpoint(lg){
+     @include abstrcats.screen(lg){
         rotate: -90deg;  
         transition: rotate 0.3s;
        }
@@ -148,7 +148,7 @@
      &:hover .dropdown{
         display: block;
      }
-     @include abstrcats.breakpoint(lg){
+     @include abstrcats.screen(lg){
         // tăng width 100% thi the con la the a se an theo va se đặt được  justify-content: space-between
           width: 100%;
           &:hover .dropdown{
@@ -164,10 +164,10 @@
     @extend %flexItemsCenter;
     gap: 20px;
     margin-left: auto;
-    @include abstrcats.breakpoint(xxl){
+    @include abstrcats.screen(xxl){
         margin-left: auto;
      }
-    @include abstrcats.breakpoint(md){
+    @include abstrcats.screen(md){
         margin-left: 0;
     }
     &__group{
@@ -177,13 +177,13 @@
         border-radius: 8px;
         background-color:var(--top-act-grounp-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-grounp-shadow);
-        @include abstrcats.breakpoint(sm){
+        @include abstrcats.screen(sm){
             display: none;
           }
     }
     &__group:first-child{
         padding: 13px;
-        // @include abstrcats.breakpoint(md){
+        // @include abstrcats.screen(md){
         //     display: none;
         //   }
 
@@ -202,7 +202,7 @@
 
     &__group:nth-child(2){
         padding: 13px 20px;
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
             background-color:  var(--top-act-grounp-bg-color);
           }
     } 
@@ -224,7 +224,7 @@
     height: 50px;
     padding: 0 40px;
     align-items: center;
-    @include abstrcats.breakpoint(md){
+    @include abstrcats.screen(md){
        padding-left: 20px;
        height: 44px;
     }

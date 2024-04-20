@@ -5,14 +5,14 @@ $grid-breakpoints: (
     xl: 1200px,
     xxl: 1400px,
 );
-@mixin breakpoint($key) {
+@mixin screen($key) {
     // su dung ham map-get
     // than so thu nhat $grid-breakpoints kieu map  
     // $key de lay ra gia tri
     $breapoints: map-get($grid-breakpoints, $key);
     @if($breapoints) {
         @media (max-width:($breapoints - 0.02)) {
-            //  @content == width ben @include abstrcats.breakpoint
+            //  @content == width ben @include abstrcats.screen
             @content;
         }
     }@else{

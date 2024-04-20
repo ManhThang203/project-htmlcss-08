@@ -6,7 +6,7 @@
     // định vị sát sang bên trái 
     left: 0;    
     padding-top: 54px;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         position: initial;
         padding-top: 0;
    }
@@ -30,7 +30,7 @@
             left: var(--arrow-left-pos);
             translate: -50%;
         } 
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
              max-height: none;
              background:transparent;
              box-shadow: none;
@@ -39,7 +39,7 @@
                  content: none;
              }
         }
-        @include abstrcats.breakpoint(md){
+        @include abstrcats.screen(md){
             padding-left: 20px;
          }
     }
@@ -52,7 +52,7 @@
     position: relative;
     // tao bien ke thua
     --main-column-width: 292px;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
         max-height: none;
    } 
     &__main{
@@ -61,7 +61,7 @@
         border-right: 1px solid var(--top-menu-border-color);
         // khi muon xuat hien thanh cuon thi chieu cao phai de tuyet doi hon
         overflow-y: auto;
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
             width: 100%;
             height: auto;
             border-right: none;
@@ -71,7 +71,7 @@
 .menu-column{
     display: flex;
     gap: 14px;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
        margin-top: 10px;
    }
     // muenu-column dang sau lien ke 
@@ -84,10 +84,10 @@
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    @include abstrcats.breakpoint(xl){
+    @include abstrcats.screen(xl){
         display: none;
     }
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
     display: block;
     }
 }
@@ -116,13 +116,13 @@
      font-size: 1.6rem;
      line-height: 150%;
      color: var(--menu-column__heading-color);
-     @include abstrcats.breakpoint(lg){
+     @include abstrcats.screen(lg){
         margin-bottom: 26px;
     }
    }
    &__list{
         margin-top: 13px;
-        @include abstrcats.breakpoint(xl){
+        @include abstrcats.screen(xl){
             margin-top: 0   ;
        }
       
@@ -160,7 +160,7 @@
     inset: 0 0 0 var(--main-column-width);
     padding-left: var(--inner-padding);
     overflow-y: auto;
-    @include abstrcats.breakpoint(lg){
+    @include abstrcats.screen(lg){
        position:initial;
        grid-template-columns: 1fr;
        padding-left: 0;
@@ -176,7 +176,7 @@
         grid-template-columns: repeat(4,1fr);
         height:  calc(var(--inner-max-height) - var(--inner-padding)*2);
         padding-left: 0;
-        @include abstrcats.breakpoint(lg){
+        @include abstrcats.screen(lg){
             grid-template-columns: 1fr;
             height: auto;
          }
