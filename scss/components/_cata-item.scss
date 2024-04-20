@@ -1,0 +1,30 @@
+@use "../abstrcats";
+.cate-item{
+    display: flex;
+    align-items: center;
+    height: 156px;
+    padding: 20px 26px;
+    gap: 20px;
+    border-radius: 16px;
+    background: var(--cate-item-bg);
+    &__thumb{
+        width: 116px;
+        height: 116px;
+        object-fit: contain;
+        background: var(--cate-item-thumb-bg);
+        padding: 11px, 20px, 11px, 20px;
+        border-radius: 8px;
+    }
+    &__title{
+       font-size: 2.2rem;
+       font-weight: 700;
+       line-height: 145.45%;
+    }
+    &__desc{
+        margin-top: 6px; 
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--cate-item-desc-color);
+    }
+}

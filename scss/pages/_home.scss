@@ -7,4 +7,11 @@
     @include abstrcats.screen(md){
        margin-top: 30px;
    }
+   &__heading{ 
+      margin-bottom: 20px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 141.66%;
+      color:var(--text-color);
+   }
 }
