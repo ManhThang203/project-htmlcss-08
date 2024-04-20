@@ -167,7 +167,10 @@
     @include abstrcats.screen(xxl){
         margin-left: auto;
      }
-    @include abstrcats.screen(md){
+     @include abstrcats.screen(md){
+        margin-left: auto;
+    }
+    @include abstrcats.screen(sm){
         margin-left: 0;
     }
     &__group{

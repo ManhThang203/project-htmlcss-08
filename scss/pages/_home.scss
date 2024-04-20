@@ -1,0 +1,10 @@
+@use "../abstrcats";
+// Home Page
+.home{
+    &__container{
+        margin-top: 40px;
+    }
+    @include abstrcats.screen(md){
+       margin-top: 30px;
+   }
+}

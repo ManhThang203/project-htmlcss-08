@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "../abstrcats";
 
 // Breakpoints, dimension, container, row, column, v.v
 $grid-breakpoints: (
@@ -9,7 +10,7 @@ $grid-breakpoints: (
     sm: 576px,
 );
 $container-max-widths: (
-    sm: 100%,
+    sm: 100% ,
     md: 540px,
     lg:  720px,
     xl:  960px,
@@ -44,6 +45,9 @@ $gutters: (
 .container {
     @extend .container-fluid;
     width: 1370px;
+    @include abstrcats.screen(md){
+        width: 100%;
+    }
 }
 
 .row {
