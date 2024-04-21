@@ -14,4 +14,13 @@
       line-height: 141.66%;
       color:var(--text-color);
    }
+   &__cate{
+    --grid-gutter-x:51px;
+    @include abstrcats.screen(xl){
+     --grid-gutter-x:30px;
+    }
+    @include abstrcats.screen(md){
+        --grid-gutter-y:30px;
+       }
+   }
 }

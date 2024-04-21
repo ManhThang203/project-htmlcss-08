@@ -1,24 +1,53 @@
 @use "../abstrcats";
 .cate-item{
     display: flex;
-    align-items: center;
     height: 156px;
     padding: 20px 26px;
     gap: 20px;
     border-radius: 16px;
     background: var(--cate-item-bg);
+    @include abstrcats.screen(xl){
+         flex-direction: column;
+         height: 100%;
+    }
+    @include abstrcats.screen(md){
+        flex-direction: row;
+        background: var(--cate-item-bg-md-color);
+        column-gap: 5px;
+     }
     &__thumb{
         width: 116px;
+        display: block;
         height: 116px;
         object-fit: contain;
         background: var(--cate-item-thumb-bg);
         padding: 11px, 20px, 11px, 20px;
         border-radius: 8px;
+        @include abstrcats.screen(xl){
+           margin: 0 auto;
+           width: 100%;
+       }
+       @include abstrcats.screen(md){
+        margin: 0 0;
+          width: 116px;
+
+     }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include abstrcats.screen(xxl){
+            padding-right: 0px;
+        }
     }
     &__title{
        font-size: 2.2rem;
        font-weight: 700;
        line-height: 145.45%;
+       @include abstrcats.screen(md){
+        width: max-content;
+      }
     }
     &__desc{
         margin-top: 6px; 
