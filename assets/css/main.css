@@ -2026,6 +2026,11 @@ html {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 991.98px) {
+  .home__heading {
+    margin-bottom: 0px;
+  }
+}
 .home__cate {
   --grid-gutter-x:51px;
   margin-bottom: 20px;

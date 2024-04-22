@@ -14,7 +14,10 @@
       color:var(--text-color);
       @include abstrcats.screen(xxl){
         margin-bottom: 20px;
-    }
+     }
+     @include abstrcats.screen(lg){
+        margin-bottom: 0px;
+     }
    }
    &__cate{
     --grid-gutter-x:51px;
