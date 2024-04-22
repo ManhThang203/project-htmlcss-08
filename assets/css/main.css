@@ -2018,6 +2018,11 @@ html {
   line-height: 141.66%;
   color: var(--text-color);
 }
+@media (max-width: 1399.98px) {
+  .home__heading {
+    margin-bottom: 20px;
+  }
+}
 .home__cate {
   --grid-gutter-x:51px;
   margin-bottom: 20px;

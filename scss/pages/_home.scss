@@ -12,6 +12,9 @@
       font-weight: 700;
       line-height: 141.66%;
       color:var(--text-color);
+      @include abstrcats.screen(xxl){
+        margin-bottom: 20px;
+    }
    }
    &__cate{
     --grid-gutter-x:51px;
