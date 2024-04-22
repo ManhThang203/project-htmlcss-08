@@ -16,11 +16,17 @@
    }
    &__cate{
     --grid-gutter-x:51px;
+    margin-bottom: 40px;
     @include abstrcats.screen(xl){
      --grid-gutter-x:30px;
     }
     @include abstrcats.screen(md){
         --grid-gutter-y:30px;
        }
+   }
+   &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
    }
 }
