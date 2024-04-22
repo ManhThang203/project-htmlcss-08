@@ -222,6 +222,9 @@
         display: block;
         cursor: pointer;
     }
+    &__separate{
+        margin: 0 10px;
+    }
 }
 .nav-btn {
     height: 50px;
