@@ -9,6 +9,10 @@
         margin: 0px 13%;
         width: 77%;
     }
+    @include abstrcats.screen(lg){
+        margin-top: 0px;
+    }
+
 }
 .product-card{
     padding: 16px;
