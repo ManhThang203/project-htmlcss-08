@@ -5,13 +5,9 @@
     margin: 0 auto;
     justify-content: space-between;
     margin-top: 20px;
-    @include abstrcats.screen(lg){
-        --grid-gutter-y:20px;
-    }
     @include abstrcats.screen(md){
-        display: flex;
-        // justify-content: flex-end;
-
+        margin: 0px 13%;
+        width: 77%;
     }
 }
 .product-card{
@@ -60,5 +56,10 @@
      }
      &__acore{
         padding: 3px 0 3px 6px;
+     }
+     &__like-btn{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
      }
 }

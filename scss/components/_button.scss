@@ -12,3 +12,14 @@
     background: var(--filter-button-bg-color);
     padding: 0 14px;
 }
+// Like-btn
+.like-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 20px 60px var(--like-btn-shadow);
+    filter: var(--icon-color);
+}
