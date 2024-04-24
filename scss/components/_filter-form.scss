@@ -1,0 +1,81 @@
+.filter-wrap{
+    position: relative;
+    z-index: 1;
+}
+.filter{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background:var(--filter-form-bg);
+    box-shadow: var(--filter-form-shadow);
+    border-radius: 20px;
+    padding: 30px;
+    &__heading{
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.45%;
+        color:#1A162E;
+    }
+    &__form{
+        margin-top: 30px;
+        &-label{
+            display: block;
+            font-size: 2.2rem;
+           font-weight: 500;
+           line-height: 145.45%;
+           color:#1A162E;
+           &--small{
+               margin-bottom: 10px;
+               font-size: 1.4rem;
+               font-weight: 500;
+               line-height: 142.85%;
+           }
+        }
+        &-group{
+            margin-top: 20px;
+            &--inline{
+                display: flex;
+                gap: 30px;
+            }
+        }
+        &-slider{
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background: #D2D1D6;
+            &::before,&::after{
+                content: "";
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                top: 50%;
+                border-radius: 50%;
+                border: 6px solid #FFB700;
+                translate: 0 -50%;
+                background: var(--filter-form-bg);
+            }
+            &::before{
+                left: var(--min-valua);
+            }
+            &::after{
+                left: var(--max-value);
+            }
+        }
+        &-input{
+            width: 121px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 142.85%;
+            color:#1A162E;
+            width: Fixed (121px)px;
+            height: 36px;
+            padding: 8px 12px 8px 12px;
+            border-radius: 6px;
+            border: 1.5px solid #1A162E;
+        }
+    }
+    &__row{
+        display: flex;
+        flex: 1;
+    }
+}
