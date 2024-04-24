@@ -92,6 +92,13 @@ a, img, button, input, template, select {
   filter: var(--icon-color);
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-rightx: 20px !important;
+  }
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1933,7 +1940,19 @@ html {
   height: 50px;
   border-radius: 50%;
   box-shadow: 0px 20px 60px var(--like-btn-shadow);
-  filter: var(--icon-color);
+}
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  margin-top: 6px;
+}
+
+.product-card {
+  width: 100%;
 }
 
 .product__cate {
@@ -1943,8 +1962,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .product__cate {
-    margin: 0px 13%;
-    width: 77%;
+    margin-left: 10px;
   }
 }
 @media (max-width: 991.98px) {
@@ -2043,11 +2061,13 @@ html {
 @media (max-width: 991.98px) {
   .home__cate {
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 767.98px) {
   .home__cate {
     --grid-gutter-y:30px;
+    margin-top: 0px;
   }
 }
 .home__row {

@@ -21,5 +21,13 @@
     height: 50px;
     border-radius: 50%;
     box-shadow: 0px 20px 60px var(--like-btn-shadow);
-    filter: var(--icon-color);
+    &:not(&--liked) .like-btn__icon--liked{
+        display: none;
+    }
+    &--liked .like-btn__icon{
+        display: none;
+    }
+    &__icon--liked{
+        margin-top: 6px;
+    }
 }

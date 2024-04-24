@@ -12,6 +12,7 @@
       font-weight: 700;
       line-height: 141.66%;
       color:var(--text-color);
+
       @include abstrcats.screen(xxl){
         margin-bottom: 20px;
      }
@@ -27,9 +28,11 @@
     }
      @include abstrcats.screen(lg){
         margin-bottom: 20px;
+        margin-top: 20px;
       }
     @include abstrcats.screen(md){
         --grid-gutter-y:30px;
+        margin-top: 0px;
        }
    }
    &__row{

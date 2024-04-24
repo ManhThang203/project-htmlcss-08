@@ -1,5 +1,5 @@
 //RESET CSS
-
+@use "../abstrcats";
 *,
 ::after,
 ::before{
@@ -37,3 +37,9 @@ a,img,button, input, template, select{
     filter: var(--icon-color);
 }
 //END RETSET CSS
+.container{
+    @include abstrcats.screen(sm){
+        padding-left: 20px !important;
+        padding-rightx  : 20px !important;
+    }
+}
