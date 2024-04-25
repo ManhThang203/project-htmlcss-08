@@ -30,6 +30,8 @@ button{
 a,img,button, input, template, select{
     font-family: inherit;
     color: inherit;
+    outline: none;
+    border: none;
     // tắt đi hiệu ứng hightnight mặc định của thẻ a và img trên mobile và taplat
     -webkit-tap-highlight-color: transparent;
 }

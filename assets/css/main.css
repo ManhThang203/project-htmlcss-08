@@ -85,6 +85,8 @@ button {
 a, img, button, input, template, select {
   font-family: inherit;
   color: inherit;
+  outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2104,7 +2106,7 @@ html {
   height: 36px;
   padding: 8px 12px 8px 12px;
   border-radius: 6px;
-  border: 1.5px solid #1A162E;
+  border: 1.5px solid #D2D1D6;
 }
 .filter__form-select-wrap {
   display: flex;
@@ -2151,6 +2153,27 @@ html {
 }
 .filter__form-tag:hover {
   color: var(--text-color);
+}
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  min-width: 366px;
+  height: 44px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #D2D1D6;
+}
+.filter__form-input-brand {
+  padding: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.66%;
+  color: #9E9DA8;
+}
+.filter__form-icon {
+  margin-left: 50px;
 }
 .filter__row {
   display: flex;
