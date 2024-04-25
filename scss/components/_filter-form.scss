@@ -4,12 +4,19 @@
 }
 .filter{
     position: absolute;
-    top: 50px;
+    top: 55px;
     right: 0;
     background:var(--filter-form-bg);
     box-shadow: var(--filter-form-shadow);
     border-radius: 20px;
     padding: 30px;
+    &__arrow-up{
+        position: absolute;
+        top: -17px;
+        right: 34px;
+        // do export ra png la 4 lần nên muốn nó chở và độ cao ban đầu thì chia 4 đi
+        height: 20.5px;
+    }
     &__heading{
         font-size: 2.2rem;
         font-weight: 500;
@@ -151,5 +158,21 @@
         width: 1px;
         background: #EEEEEE;
         margin: 0 30px;
+    }
+    &__footer{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+    &__cancel,
+    &__submit{
+        padding: 0px 10px;
+        height: 38px;
+    }
+    &__cancel{
+        font-size: 1.5rem;
+    }
+    &__submit{
+        font-size: 1.4rem;
     }
 }

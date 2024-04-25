@@ -31,3 +31,47 @@
         margin-top: 6px;
     }
 }
+// Buttons
+.btn{
+    padding: 0px 20px;
+    height: 46px;
+    background: #f8f8fb;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 6px;
+    //  user-select khong cho nguoi dung boi den button
+    user-select: none;
+    + .btn{
+        margin-left: 20px;
+    }
+    &--text{
+        color: #9e9da8;
+        background: transparent;
+        font-weight: 400;
+    }
+    &--primary{
+        font-size: 1.4rem;
+        font-weight:500;
+        line-height: 142.85%;
+        color: #1A162E;
+        background: #FFB700;
+    }
+    &--outline{
+        color: #1A162E;
+        border: 1px solid #D2D1D6;
+        background: transparent;
+    }
+    &--rounded{
+        border-radius: 99px;
+    }
+    // add chil buil
+    &[disabled],
+    &--disabled{
+        opacity: 0.5;
+        // pointer-events lam cho nguoi dung khong an  dc
+        pointer-events: none;
+    }
+    &:hover{
+        opacity: 0.9;
+    }
+}
