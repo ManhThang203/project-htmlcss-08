@@ -35,6 +35,9 @@ a,img,button, input, template, select{
     // tắt đi hiệu ứng hightnight mặc định của thẻ a và img trên mobile và taplat
     -webkit-tap-highlight-color: transparent;
 }
+input{
+    background: transparent;
+}
 .icon{
     filter: var(--icon-color);
 }

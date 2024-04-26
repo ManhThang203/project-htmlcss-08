@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -110,16 +110,16 @@
                         <div class="home__heading">Total LavAzza 1320</div>
                         <div class="filter-wrap">
                             <div class="filter-btn">
-                                <button class="filter-btn">
+                                <button class="filter-btn js-toggle"  toggle-target="#home-filter">
                                     Filter
                                     <img src="./assets/img/category/filter.svg" alt="Filter" class="icon filter-btn__icon">
                                 </button>
 
-                                <div class="filter">
+                                <div id="home-filter" class="filter hide">
                                     <img src="./assets/img/filter-img/arrow-up.png" alt="" class="filter__arrow-up">
                                     <h3 class="filter__heading">Filter</h3>
                                     <form action="" class="filter__form">
-                                        <div class="filter__row">
+                                        <div class="filter__row filter__content">
                                             <!-- Filter Col 1 -->
                                             <div class="filter__col">
                                                 <label for="" class="filter__form-label">Price</label>
@@ -174,17 +174,17 @@
                                                    </div>
                                                 </div>
                                                 <div class="filter__form-group">
-                                                    <div class="filter__form-tags">
+                                                    <div class="filter__form-tags--column">
                                                         <button class="filter__form-tag">Lavazza</button>
                                                         <button class="filter__form-tag">Nescafe</button>
-                                                        <button class="filter__form-tag">Starbucks</button>
+                                                        <button class="filter__form-tag ">Starbucks</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="filter__row filter__footer">
                                             <!-- <button class="btn">Normal</button> -->
-                                            <button class="btn btn--text filter__cancel">Cancel</button>
+                                            <button class="btn btn--text filter__cancel js-toggle"  toggle-target="#home-filter">Cancel</button>
                                             <button class="btn btn--primary filter__submit">Show Result</button>
                                             <!-- <button class="btn btn--outline">Outlie</button>
                                             <button class="btn btn--rounded btn--primary">Rounded</button> -->
