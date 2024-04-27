@@ -3,7 +3,7 @@
     position: relative;
     z-index: 1;
     @include abstrcats.screen(md){
-        z-index: 1;  
+        z-index: 0;  
     }
 }
 .filter{
@@ -99,6 +99,7 @@
             padding: 8px 12px 8px 12px;
             border-radius: 6px;
             border: 1.5px solid #D2D1D6;
+           
         }
         &-select-wrap{
             display: flex;
@@ -180,6 +181,9 @@
             border: 1px solid #D2D1D6;
             @include abstrcats.screen(md){
                min-width: 0px;
+            }
+            @include abstrcats.screen(sm){
+                font-size: 1.6rem;
             }
         }
         &-input-brand{
