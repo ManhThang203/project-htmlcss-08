@@ -2110,7 +2110,7 @@ html {
 }
 .filter.hide {
   opacity: 0;
-  overflow: hidden;
+  visibility: hidden;
 }
 .filter__arrow-up {
   position: absolute;

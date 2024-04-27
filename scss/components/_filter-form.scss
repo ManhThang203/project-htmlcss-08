@@ -25,7 +25,8 @@
     }
     &.hide{
         opacity: 0;
-        overflow: hidden;
+        // overflow: hidden;
+        visibility: hidden;
     }
     &__arrow-up{
         position: absolute;
