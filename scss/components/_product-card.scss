@@ -11,6 +11,8 @@
     --grid-gutter-y: 15px;
     @include abstrcats.screen(md){
         margin-left: 10px;
+        position: relative;
+        z-index: -1;
     }
     @include abstrcats.screen(lg){
         margin-top: 0px;
@@ -69,4 +71,7 @@
         bottom: 0px;
         right: 0px;
      }
+}
+.like-btn__icon{
+    filter: var(--icon-color);
 }

@@ -1,12 +1,36 @@
+@use "../abstrcats";
 .footer{
+    margin-top: 60px;
     background: var(--header-bg-color);
     padding: 60px 0;
-    &__inner{
-
+    @include abstrcats.screen(md){
+        padding: 60px 0px 250px 0;
+        position: relative;
+        z-index: -1;
+    }
+    &__logo{
+        display: flex;
+        gap: 20px;
     }
     &__row{
+        @include abstrcats.screen(lg){
+            grid-template-columns: 1fr;
+        }
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns:1.6fr repeat(5,1fr);
+        gap: 50px;
+    }
+    &__desc{
+        margin-top: 30px;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        @include abstrcats.screen(lg){
+           width: min(400px, 100%);
+        }
+    }
+    &__held-text{
+        margin-top: 50px;
+        font-size: 1.4rem;
     }
     &__heading{
         // tất cả các chữ cái đc viết hoa
@@ -16,16 +40,108 @@
         
     }
     &__list{
-        margin-top: 30px;
+        margin-top: 18px;
         
     }
-    &__link{
-        color: #0071DC;
-        display: inline-block;
+    &__link, &__text{    
         padding: 8px 0;
         font-size: 1.5rem;
-       &:hover{
-         text-decoration: underline;
+        line-height: 1.4;
+    }
+    &__link{
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 400;
+        &:hover{
+           color: #0071DC;
        }
     }
-}
+    &__text, &__copyright{
+        color: rgb(139, 141, 143);
+    }
+    &__label{
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    &__form{
+        padding-top: 40px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        @include abstrcats.screen(xl){
+           flex-direction: column;
+       }
+       @include abstrcats.screen(lg){
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &__input{
+        border-radius: 6px;
+        padding: 10px 16px;
+        border: 1px solid #D2D1D6;
+        font-size: 1.5rem;
+        font-weight: 500;
+        &::placeholder{
+            font-weight: 400;
+        }
+        @include abstrcats.screen(lg){
+            width: 100%;
+          }
+    }
+    &__bottom{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        @include abstrcats.screen(lg){
+            flex-direction: column-reverse;
+            gap: 50px;
+        }
+        @include abstrcats.screen(md){
+            position: absolute;
+            z-index: 0  ;
+         }
+    }
+    &__socials{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__social-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 6px;
+        // grayscale làm nhạt màu icon
+        filter: grayscale(50%);
+        transition:  translate,filter ;
+        transition-duration: 0.4s;
+        &--facebook{
+            background:#4064ac;
+        }
+        &--youtebe{
+            background:#ed0000;
+        }
+        &--titok{
+            background:#1a0919;
+        }
+        &--twitter{
+            background:#1c9cea;
+        }
+        &--linkedin{
+            background:#0073af;
+        }
+        &:hover{
+            filter: grayscale(0);
+            translate: 0 -5px;
+        }
+    }
+    &__social-icon{
+        // dung with để đặt kích thước của icon để chuyển từ hàng dọc sang hàng ngang
+        width: 20px;
+        filter: brightness(0) saturate(100%) invert(98%) sepia(7%) saturate(590%) hue-rotate(194deg) brightness(118%) contrast(100%);;
+        }
+    }

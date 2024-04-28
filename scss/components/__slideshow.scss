@@ -11,6 +11,7 @@
     }
     &__item{
         position: relative;
+        z-index: -1;
         flex-shrink: 0;
         width: 100%;
         // 34% nó sẽ bằng độ rộng của 34% của thế cha chứa nó 
