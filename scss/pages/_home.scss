@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+   //  margin-bottom: 20px;
     @include abstrcats.screen(lg){
        margin-bottom: 0px;
     }

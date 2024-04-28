@@ -94,7 +94,7 @@
             font-weight: 500;
             line-height: 142.85%;
             color:var(--text-color);
-            width: Fixed (121px)px;
+            width: 121px;
             height: 36px;
             padding: 8px 12px 8px 12px;
             border-radius: 6px;
@@ -146,14 +146,16 @@
             }
         }
         &-tags--column{
+            display: flex;
+                column-gap: 43px;
             @include abstrcats.screen(md){
                 display: flex;
                 column-gap: 14px !important;
             }
-            @include abstrcats.screen(xl){
-                display: flex;
-                column-gap: 43px;
-            }
+            // @include abstrcats.screen(xl){
+            //     display: flex;
+            //     column-gap: 43px;
+            // }
         }
         &-tag{
             font-size: 1.4rem;

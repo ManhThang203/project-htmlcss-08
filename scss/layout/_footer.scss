@@ -1,0 +1,31 @@
+.footer{
+    background: var(--header-bg-color);
+    padding: 60px 0;
+    &__inner{
+
+    }
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    &__heading{
+        // tất cả các chữ cái đc viết hoa
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.8rem;
+        
+    }
+    &__list{
+        margin-top: 30px;
+        
+    }
+    &__link{
+        color: #0071DC;
+        display: inline-block;
+        padding: 8px 0;
+        font-size: 1.5rem;
+       &:hover{
+         text-decoration: underline;
+       }
+    }
+}
