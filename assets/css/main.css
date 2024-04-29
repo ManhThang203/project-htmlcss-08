@@ -82,7 +82,7 @@ button {
   cursor: pointer;
 }
 
-a, img, button, input, template, select {
+a, img, button, input, template, select, label {
   font-family: inherit;
   color: inherit;
   outline: none;
@@ -1358,6 +1358,25 @@ html {
     justify-content: space-between;
   }
 }
+@media (max-width: 991.98px) {
+  .top-bar__logo {
+    gap: 10px !important;
+    margin-left: 39px;
+    margin-right: 39px;
+  }
+  .top-bar__logo__title {
+    font-size: 1.8rem !important;
+  }
+  .top-bar__logo__img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .top-bar {
+    margin-left: 0;
+  }
+}
 
 .navbar {
   margin-left: 129px;
@@ -1745,34 +1764,11 @@ html {
   align-items: center;
   gap: 14px;
 }
-@media (max-width: 991.98px) {
-  .logo {
-    gap: 10px;
-    margin-left: 39px;
-    margin-right: 39px;
-  }
-}
 .logo__title {
   font-family: Gordita;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 145.455%;
-}
-@media (max-width: 767.98px) {
-  .logo__title {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__title {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__img {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 .dropdown {
@@ -2663,9 +2659,18 @@ html {
   line-height: 146.66%;
   color: #9E9DA8;
 }
+@media (max-width: 767.98px) {
+  .form__checkbox-label {
+    font-size: 1.4rem;
+  }
+}
 .form__btn, .form__btn-outline {
   width: 100%;
   justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.44%;
+  color: #1A162E;
 }
 .form__btn-outline {
   gap: 10px;
@@ -2770,6 +2775,12 @@ html {
   text-align: center;
   color: var(--auth-text-color);
 }
+@media (max-width: 767.98px) {
+  .auth__intro-text {
+    font-size: 1.5rem;
+    width: 305px;
+  }
+}
 .auth__intro-img {
   max-width: 100%;
 }
@@ -2811,6 +2822,11 @@ html {
   line-height: 146.66%;
   color: var(--auth-heading-color);
 }
+@media (max-width: 767.98px) {
+  .auth__heading {
+    font-size: 2.2rem;
+  }
+}
 .auth__desc {
   width: 415px;
   margin-top: 10px;
@@ -2818,6 +2834,12 @@ html {
   font-weight: 500;
   line-height: 146.66%;
   color: #9E9DA8;
+}
+@media (max-width: 767.98px) {
+  .auth__desc {
+    font-size: 1.4rem;
+    width: 272px;
+  }
 }
 .auth__form {
   width: 100%;
@@ -2833,11 +2855,21 @@ html {
   line-height: 144.44%;
   color: #9E9DA8;
 }
+@media (max-width: 767.98px) {
+  .auth__text {
+    font-size: 1.6rem;
+  }
+}
 .auth__link {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.44%;
   color: #0071DC;
+}
+@media (max-width: 767.98px) {
+  .auth__link {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

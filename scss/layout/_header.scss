@@ -30,6 +30,24 @@
     //         display: block;
     //     }
     // }
+    &__logo{
+        @include abstrcats.screen(lg){
+            gap: 10px !important;
+            margin-left: 39px;
+            margin-right: 39px;
+            &__title{
+                font-size: 1.8rem !important;
+            }
+            &__img{
+                
+                    width: 24px;
+                    height: 24px;
+                 }
+            }
+        }
+        @include abstrcats.screen(md){
+             margin-left: 0;
+        }
 }
 .navbar{
     margin-left: 129px;

@@ -1,3 +1,4 @@
+@use "../abstrcats";
 .form{
     &:has(:invalid) &__submit-btn{
         opacity: 0.5;
@@ -109,11 +110,18 @@
             font-weight: 500;
             line-height: 146.66%;
             color: #9E9DA8;
+            @include abstrcats.screen(md){
+                font-size: 1.4rem;
+             }
         }
     }
     &__btn,&__btn-outline{
         width: 100%;
         justify-content: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.44%;
+        color: #1A162E;
     }
     &__btn-outline{
         gap: 10px;

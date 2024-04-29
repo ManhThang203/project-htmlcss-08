@@ -3,31 +3,12 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    @include abstrcats.screen(lg){
-      gap: 10px;
-      margin-left: 39px;
-      margin-right: 39px;
-    }
-    // @include abstrcats.screen(md){
-    //   margin-left: 0;
-    // }
+
     &__title{
          //styleName: Bold 22;
       font-family: Gordita;
       font-size: 2.2rem;
       font-weight: 700;
       line-height: 145.455%;
-      @include abstrcats.screen(md){
-        font-size: 1.8rem;
-      }
-      @include abstrcats.screen(lg){
-        font-size: 1.8rem;
-      }
-    }
-    &__img{
-      @include abstrcats.screen(lg){
-          width: 24px;
-          height: 24px;
-       }
     }
 }
