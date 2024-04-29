@@ -1226,6 +1226,20 @@ input {
     display: none !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 html.dark {
   --text-color:#fff;
   --icon-color: brightness(0) saturate(100%) invert(98%) sepia(7%) saturate(590%) hue-rotate(194deg) brightness(118%) contrast(100%);
@@ -2544,12 +2558,27 @@ html {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
 .form__group--input {
   display: flex;
   align-items: center;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon--error {
+  display: block;
 }
 .form__text-input {
   display: flex;
@@ -2572,8 +2601,23 @@ html {
 .form__input::placeholder {
   color: #D2D1D6;
 }
+.form__error {
+  display: none;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: red;
+}
 .form__input-icon {
   margin-left: 12px;
+}
+.form__input-icon--error {
+  display: none;
+  margin-left: 12px;
+  width: 24px;
+  height: 24px;
+  animation: shake 0.8s;
 }
 .form__pull-right {
   margin-left: auto;
@@ -2586,8 +2630,34 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
+  user-select: none;
+  position: relative;
+}
+.form__checkbox::before, .form__checkbox::after {
+  position: absolute;
+  content: "";
+}
+.form__checkbox::before {
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  border: 1.5px solid #9e9da8;
+}
+.form__checkbox::after {
+  width: 15px;
+  height: 9px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  rotate: -45deg;
+  left: 2px;
+  top: 4px;
+}
+.form__checkbox:has(:checked)::before {
+  border-color: rgb(242, 242, 23);
+  background: rgb(242, 242, 23);
 }
 .form__checkbox-label {
+  margin-left: 29px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.66%;

@@ -1,9 +1,27 @@
 .form{
+    &:has(:invalid) &__submit-btn{
+        opacity: 0.5;
+        pointer-events: none;
+    }
     &__group{
         margin-top: 30px;
         &--input{
             display: flex;
             align-items: center;
+        }
+    }
+    // form group co 1 thanh phan ben trong ko hop le thi tac dong vao texxt-input
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)){
+        .form__text-input{
+            border-color: red;
+            background: rgba($color: red, $alpha: 0.1);
+        }
+        .form__input-icon{
+            display: none;
+        }
+        .form__error,
+        .form__input-icon--error{
+            display: block;
         }
     }
     &__text-input{
@@ -27,8 +45,23 @@
             color: #D2D1D6;
         }
     }
+    &__error{
+        display: none;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: red;
+    }
     &__input-icon{
         margin-left: 12px;
+        &--error{
+            display: none;
+            margin-left: 12px;
+            width: 24px;
+            height: 24px;
+            animation: shake 0.8s;
+        }
     }
     &__pull-right{
         margin-left: auto;
@@ -41,7 +74,37 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        // sử dụng user-select none để khi người dùng quyệt vào thì sẽ ko hiện vệt xanh
+        user-select: none;
+            position: relative;
+            &::before,
+            &::after{
+                position: absolute;
+                content: "";
+            }
+            &::before{
+                width: 19px;
+                height: 19px;
+                border-radius: 5px;
+                border: 1.5px solid #9e9da8;
+            }
+            &::after{
+                width: 15px;
+                height: 9px;
+                border: 3px solid;
+                border-color: transparent transparent #fff #fff;
+                rotate: -45deg;
+                left: 2px;
+                top: 4px;
+            }
+            &:has(:checked) {
+                &::before{
+                    border-color:rgb(242, 242, 23) ;
+                    background: rgb(242, 242, 23);
+                }
+            }
         &-label{
+            margin-left: 29px;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.66%;
