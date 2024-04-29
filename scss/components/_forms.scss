@@ -1,0 +1,64 @@
+.form{
+    &__group{
+        margin-top: 30px;
+        &--input{
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__text-input{
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        height: 50px;
+        border: 1px solid #D2D1D6;
+        border-radius: 10px;
+        &:focus-within{
+            border-color:rgb(148, 227, 247);
+        }
+    }
+    &__input{
+        flex: 1;
+        height: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.44%;
+        &::placeholder{
+            color: #D2D1D6;
+        }
+    }
+    &__input-icon{
+        margin-left: 12px;
+    }
+    &__pull-right{
+        margin-left: auto;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.66%;
+        color:#0071DC;
+    }
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &-label{
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.66%;
+            color: #9E9DA8;
+        }
+    }
+    &__btn,&__btn-outline{
+        width: 100%;
+        justify-content: center;
+    }
+    &__btn-outline{
+        gap: 10px;
+        margin-top: 30px;
+        margin-left: 0 !important;
+        color: var(--form-btn-outline-color);
+    }
+    &__icon{
+        filter: var(--auth-icon-color);
+    }
+}

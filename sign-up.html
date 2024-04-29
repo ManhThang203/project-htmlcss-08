@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -17,24 +17,75 @@
 
     <!-- FONTS -->
     <link rel="stylesheet" href="./assets/Fonts/stylesheet.css">
-    <!-- STYLES -->
+    <!-- STYLES -->`
     <link rel="stylesheet" href="./assets/css/main.css">
     <!-- SCRIPTS -->
     <script src="./assets/js/scripts.js"></script>
 </head>
 
 <body>
-    <header id="sign-up" header></header>
-    
-    <script>
-        load("#sign-up", "sign-up.html");
-    </script>
-
-    <h1>Sign up Page</h1>
-    <footer></footer>
-    <script>
-        load("#sign-up", "sign-up.html");
-    </script>
+    <main>
+        <!-- xác thực ta dụng class có tên là auth -->
+        <div class="auth">
+            <!-- Auth Intro -->
+            <div class="auth__intro">
+                <img src="./assets/img/auth-item/intro.svg" alt="" class="auth__intro-img">
+                <p class="auth__intro-text"> The best of luxury brand values, high quality products, and innovative
+                    services</p>
+            </div>
+            <!-- Auth Content -->
+            <div class="auth__content">
+                <div class="auth__content-inner">
+                    <!-- Logo -->
+                    <a href="./" class="footer__logo">
+                        <img src="./assets/favicon/favicon-32x32.png" alt="" class="logo__img">
+                        <h1 class="logo__title">grocerymart</h1>
+                    </a>
+                    <h1 class="auth__heading">Sign Up</h1>
+                    <p class="auth__desc">Let’s create your account and  Shop like a pro and save money.</p>
+                    <form action="" class="auth__form">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="email" name="" id="" placeholder="Email" class="form__input">
+                                <img src="./assets/img/category/login-input.svg" alt="" class="form__input-icon">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="password" name="" id="" placeholder="Password" class="form__input">
+                                <img src="./assets/img/category/auth-block.svg" alt="" class="form__input-icon">
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="password" name="" id="" placeholder="Confirm Password" class="form__input">
+                                <img src="./assets/img/category/auth-block.svg" alt="" class="form__input-icon">
+                            </div>
+                        </div>
+                        <div class="form__group form__group--input">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input">
+                                <span class="form__checkbox-label">Set as default card </span>
+                            </label>
+                            <a href="#!" class="auth__link form__pull-right">Recovery Password</a>
+                        </div>
+                        <div class="form__group auth__btn-group">
+                            <button class="btn btn--primary form__btn">Sign Up</button>
+                            <button class="btn btn--outline form__btn-outline">
+                                <img src="./assets/img/category/googl.svg" alt="" class="btn__icon form__icon">
+                                Sign in with Gmail
+                            </button>
+                        </div>
+                        
+                    </form>
+                    <p class="auth__text">
+                        You have an account yet?
+                        <a href="./sign-in.html" class="auth__link">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
