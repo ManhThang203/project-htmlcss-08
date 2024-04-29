@@ -1484,6 +1484,11 @@ html {
   .top-atc {
     margin-left: auto;
   }
+  .top-atc__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
+  }
 }
 @media (max-width: 575.98px) {
   .top-atc {
@@ -2666,11 +2671,25 @@ html {
   flex: 1;
 }
 .auth__intro {
+  position: relative;
+  padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background: var(--auth-intro-bg-color);
+  overflow-x: hidden;
+}
+.auth__intro-logo, .auth__intro-next {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+.auth__intro-logo {
+  top: 50px;
+}
+.auth__intro-next {
+  bottom: 50px;
 }
 .auth__intro-text {
   margin-top: 49px;
@@ -2681,9 +2700,31 @@ html {
   text-align: center;
   color: var(--auth-text-color);
 }
+.auth__intro-img {
+  max-width: 100%;
+}
+@media (max-width: 767.98px) {
+  .auth__intro-img {
+    width: min(370px, 100%);
+  }
+}
 .auth__content {
-  padding: 50px 0;
+  padding: 50px 30px;
   background: var(--auth-bg-color);
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    translate: 0%;
+    transition: translate 0.3s;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
 }
 .auth__content-inner {
   display: flex;

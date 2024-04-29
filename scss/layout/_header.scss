@@ -168,6 +168,11 @@
      }
      @include abstrcats.screen(md){
         margin-left: auto;
+        &__sign-up{
+            height: 40px !important;
+            padding: 0 8px !important;
+            font-size: 1.5rem !important;
+        }
     }
     @include abstrcats.screen(sm){
         margin-left: 0;
