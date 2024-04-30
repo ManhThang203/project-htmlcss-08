@@ -52,4 +52,7 @@ html {
     // Auth 
     --auth-bg-color: #fff;
     --auth-heading-color:#1A162E;
-}
+    @include abstrcats.screen(md){
+        --auth-intro-bg-color:#fff;
+    }
+    }

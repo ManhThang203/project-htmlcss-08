@@ -1328,6 +1328,11 @@ html {
     --header-shadow-color:0px 20px 60px 10px #EDEDF633;
   }
 }
+@media (max-width: 767.98px) {
+  html {
+    --auth-intro-bg-color:#fff;
+  }
+}
 
 .top-atc__btn, .top-atc__group, .top-atc, .navbar__link, .navbar__list, .top-bar {
   display: flex;
@@ -2561,6 +2566,11 @@ html {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--input {
   display: flex;
   align-items: center;
@@ -2677,6 +2687,11 @@ html {
   margin-top: 30px;
   margin-left: 0 !important;
   color: var(--form-btn-outline-color);
+}
+@media (max-width: 767.98px) {
+  .form__btn-outline {
+    margin-top: 20px;
+  }
 }
 .form__icon {
   filter: var(--auth-icon-color);
@@ -2798,6 +2813,7 @@ html {
     position: fixed;
     inset: 0;
     z-index: 1;
+    padding: 30px 30px;
     translate: 0%;
     transition: translate 0.3s;
     overflow-y: auto;
@@ -2824,6 +2840,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .auth__heading {
+    margin-top: 30px;
     font-size: 2.2rem;
   }
 }
@@ -2845,6 +2862,11 @@ html {
   width: 100%;
   margin-top: 60px;
 }
+@media (max-width: 767.98px) {
+  .auth__form {
+    margin-top: 20px;
+  }
+}
 .auth__text {
   display: flex;
   align-items: center;
@@ -2857,6 +2879,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .auth__text {
+    margin-top: 25px;
     font-size: 1.6rem;
   }
 }

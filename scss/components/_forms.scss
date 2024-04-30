@@ -6,6 +6,9 @@
     }
     &__group{
         margin-top: 30px;
+        @include abstrcats.screen(md){
+           margin-top: 20px;
+         }
         &--input{
             display: flex;
             align-items: center;
@@ -128,6 +131,9 @@
         margin-top: 30px;
         margin-left: 0 !important;
         color: var(--form-btn-outline-color);
+        @include abstrcats.screen(md){
+           margin-top: 20px;
+         }
     }
     &__icon{
         filter: var(--auth-icon-color);

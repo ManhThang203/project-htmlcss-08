@@ -55,6 +55,7 @@
             position: fixed;
             inset: 0;
             z-index: 1;
+            padding: 30px 30px;
             translate: 0%;
             transition:  translate .3s;
             overflow-y: auto;
@@ -80,6 +81,7 @@
         line-height: 146.66%;
         color:var(--auth-heading-color);
         @include abstrcats.screen(md){
+            margin-top: 30px;
             font-size: 2.2rem;
          }
    }
@@ -98,6 +100,9 @@
    &__form{
     width: 100%;
     margin-top: 60px;
+    @include abstrcats.screen(md){
+       margin-top: 20px;
+     }
    }
    &__text{
     display: flex;
@@ -109,6 +114,7 @@
     line-height: 144.44%;
     color: #9E9DA8;
     @include abstrcats.screen(md){
+        margin-top: 25px;
         font-size: 1.6rem;
      }
    }
