@@ -42,6 +42,7 @@
              }
         }
         &-img{
+             width: var(--with);
              max-width: 100%;
              @include abstrcats.screen(md){
                 width: min(370px, 100%);
@@ -97,12 +98,19 @@
         width: 272px;
      }
    }
+   &-message{
+     margin-top: 50px;
+   }
    &__form{
     width: 100%;
     margin-top: 60px;
+      &--forgot{
+          margin-top: 0px !important;
+    } 
     @include abstrcats.screen(md){
        margin-top: 20px;
      }
+
    }
    &__text{
     display: flex;
@@ -127,4 +135,5 @@
         font-size: 1.6rem;
      }
    }
+
 }

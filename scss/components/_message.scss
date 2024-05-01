@@ -1,0 +1,16 @@
+.message{
+    // Box model
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 8px;
+    //Text
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 500;
+    &--success{
+        // Color
+        background: #b7ebce;
+        border: 1.5px solid #27a907;
+        
+    }
+}
