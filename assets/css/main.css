@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
+  line-height: 0;
 }
 
 ol, ul {
@@ -1270,6 +1270,8 @@ html.dark {
   --product-card-brand-color:#9E9DA8;
   --product-card-price-color:#fff;
   --filter-form-bg:#292E39;
+  --form-check-color:#292e39;
+  --form-check-bg:#fff;
   --filter-form-shadow: 0px 40px 90px 20px #00000066;
   --filter-form-tag-bg:#171C28;
   --filter-form-arrow-up: brightness(0) saturate(100%) invert(13%) sepia(25%) saturate(576%) hue-rotate(182deg) brightness(90%) contrast(86%);
@@ -1317,6 +1319,8 @@ html {
   --product-card-brand-color:#9E9DA8;
   --product-card-price-color:#1A162E;
   --filter-form-bg:#fff;
+  --form-check-color:#fff;
+  --form-check-bg:rgb(242, 242, 23);
   --filter-form-shadow:0px 40px 90px 20px #C8C8C866;
   --filter-form-tag-bg:#F8F8FB;
   --auth-bg-color: #fff;
@@ -2653,14 +2657,14 @@ html {
   width: 15px;
   height: 9px;
   border: 3px solid;
-  border-color: transparent transparent #fff #fff;
+  border-color: transparent transparent var(--form-check-color) var(--form-check-color);
   rotate: -45deg;
   left: 2px;
   top: 4px;
 }
 .form__checkbox:has(:checked)::before {
-  border-color: rgb(242, 242, 23);
-  background: rgb(242, 242, 23);
+  border-color: var(--form-check-bg);
+  background: var(--form-check-bg);
 }
 .form__checkbox-label {
   margin-left: 29px;
