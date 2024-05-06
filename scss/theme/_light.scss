@@ -57,4 +57,10 @@ html {
     @include abstrcats.screen(md){
         --auth-intro-bg-color:#fff;
     }
-    }
+    // Product Detail
+    --product-detail-color:#fff;
+    // Breadcrumbs
+    --breadcrumbs-bg-color:#F6F6F6;
+    --item-hover-color:0px 20px 60px 10px #EDEDF633;
+    --breadcrumbs-shadow-color:#EDEDF633;
+}

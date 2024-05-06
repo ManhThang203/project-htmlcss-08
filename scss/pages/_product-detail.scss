@@ -1,0 +1,12 @@
+.product-page{
+    // Display
+    display: flex;
+    flex-direction: column;
+    // Box model
+    min-height: 100vh;
+    // Color
+    background: var(--product-detail-color);
+}
+.product-container{
+    margin-top: 30px;
+}
